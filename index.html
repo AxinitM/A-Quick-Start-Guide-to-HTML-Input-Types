@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf9fd" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>HTML Forms Cheat Sheet: Input Types Explained</title>
+
+    <meta
+      name="description"
+      content="Quick reference for all HTML input types — text, number, radio, checkbox, date, file, and more. Learn their syntax, attributes, and practical usage examples."
+    />
+    <meta
+      name="keywords"
+      content="HTML, input types, forms, cheat sheet, web development, frontend, tutorial, reference"
+    />
+
+    <!-- === Google Fonts === -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Header section -->
+      <header>
+        <h1>
+          A Quick Start Guide <br />
+          to HTML Input Types
+        </h1>
+      </header>
+      <main>
+        <!--  Text section -->
+
+        <article>
+          <p>
+            The <code>type</code> attribute allows you to specify the format of
+            input that will be accepted in the field. There is a wide assortment
+            of types that allow you to define precisely the kind of data you
+            want to accept. Some of the input <code>types</code> provide user
+            interface elements that help the user specify the desired value. For
+            example, the <code>range</code> type displays a slider, the
+            <code>date</code> and <code>time</code> types display formatting
+            helpers and up/down arrows to toggle months and years, and
+            <code>radio</code> and <code>checkbox</code> fields are sized
+            appropriately on each device.
+          </p>
+          <h3>There are some best practices for using input types:</h3>
+          <ul>
+            <li>
+              Always choose the input type that best matches the expected data —
+              for example, use
+              <code>type="email"</code> for email addresses and
+              <code>type="number"</code> for numeric values. This helps browsers
+              validate input and display the most suitable keyboard on mobile
+              devices.
+            </li>
+            <li>
+              Combine input types with attributes like <code>required</code>,
+              <code>min</code>, <code>max</code>, and <code>pattern</code> to
+              improve both validation and user experience.
+            </li>
+            <li>
+              Use clear <code>&lt;label&gt;</code> elements or
+              <code>aria-label</code> attributes to make your form accessible to
+              screen readers.
+            </li>
+            <li>
+              Test your inputs on multiple devices and browsers to ensure
+              consistent behavior of specialized input types (like date pickers
+              or range sliders).
+            </li>
+          </ul>
+        </article>
+
+        <!-- Table section   -->
+
+        <article>
+          <h2>VARIOUS INPUT TYPES</h2>
+
+          <table class="input-types-table">
+            <tbody>
+              <!-- TEXT Section -->
+              <tr class="section-row">
+                <th colspan="2" class="table-section-title">TEXT</th>
+              </tr>
+              <tr class="odd">
+                <td>text</td>
+                <td>Generic text input.</td>
+              </tr>
+              <tr class="even">
+                <td>number</td>
+                <td>Generic number input (no letters allowed).</td>
+              </tr>
+              <tr class="odd">
+                <td>email</td>
+                <td>Email address input.</td>
+              </tr>
+              <tr class="even">
+                <td>tel</td>
+                <td>Phone number input.</td>
+              </tr>
+              <tr class="odd">
+                <td>url</td>
+                <td>Website address (URL) input.</td>
+              </tr>
+              <tr class="even">
+                <td>search</td>
+                <td>Search input (behaves like text).</td>
+              </tr>
+              <tr class="odd">
+                <td>password</td>
+                <td>
+                  Behaves like text but obscures characters for more secure
+                  entry.
+                </td>
+              </tr>
+
+              <!-- DATE AND TIME Section -->
+              <tr class="section-row">
+                <th colspan="2" class="table-section-title">DATE AND TIME</th>
+              </tr>
+              <tr class="odd">
+                <td>month</td>
+                <td>Provides for month and year input.</td>
+              </tr>
+              <tr class="even">
+                <td>week</td>
+                <td>Provides for week and year input.</td>
+              </tr>
+              <tr class="odd">
+                <td>time</td>
+                <td>Provides for time input in <code>hh:mm:ss AM/PM</code>.</td>
+              </tr>
+              <tr class="even">
+                <td>date</td>
+                <td>
+                  Provides for <code>mm/dd/yyyy</code> input, adjusting for
+                  localized international variants.
+                </td>
+              </tr>
+              <tr class="odd">
+                <td>datetime-local</td>
+                <td>
+                  Provides for <code>mm/dd/yyyy</code> date and
+                  <code>hh:mm:ss AM/PM</code> time input, adjusting for
+                  localized international variants.
+                </td>
+              </tr>
+
+              <!-- MULTIPLE CHOICE / CHECK Section -->
+              <tr class="section-row">
+                <th colspan="2" class="table-section-title">
+                  MULTIPLE CHOICE / CHECK
+                </th>
+              </tr>
+              <tr class="odd">
+                <td>radio</td>
+                <td>
+                  Displays circular buttons to select from multiple options.
+                  Text for options is supplied via a
+                  <code>&lt;label&gt;</code> element. If selected by user,
+                  <code>value</code> attribute is sent to the server. To force
+                  selection among multiple elements, give each input radio
+                  element the same <code>name</code> attribute.
+                </td>
+              </tr>
+              <tr class="even">
+                <td>checkbox</td>
+                <td>
+                  Displays a checkbox the user can toggle on and off. Text for
+                  the option is supplied via a
+                  <code>&lt;label&gt;</code> element, and the value is specified
+                  via the <code>value</code> attribute.
+                </td>
+              </tr>
+
+              <!-- SUBMISSION Section -->
+              <tr class="section-row">
+                <th colspan="2" class="table-section-title">SUBMISSION</th>
+              </tr>
+              <tr class="odd">
+                <td>button</td>
+                <td>
+                  Displays a button. The <code>value</code> attribute is
+                  displayed as the button text. By itself, it doesn't do
+                  anything, but when paired with JavaScript it can trigger
+                  action on the page.
+                </td>
+              </tr>
+              <tr class="even">
+                <td>reset</td>
+                <td>
+                  Displays a button that resets all input elements to their
+                  default or preselected values. Text on the button is taken
+                  from the <code>value</code> attribute.
+                </td>
+              </tr>
+              <tr class="odd">
+                <td>submit</td>
+                <td>
+                  Displays a submit button, allowing for submission of the form
+                  given the <code>action</code> and <code>method</code> values.
+                </td>
+              </tr>
+              <tr class="even">
+                <td>image</td>
+                <td>
+                  Same as submit but the <code>src</code> attribute of the input
+                  element is used to specify the URL of an image to use instead
+                  of the submit button. You need to specify
+                  <code>width</code> and <code>height</code> attributes of the
+                  image.
+                </td>
+              </tr>
+
+              <!-- SPECIAL PURPOSE Section -->
+              <tr class="section-row">
+                <th colspan="2" class="table-section-title">SPECIAL PURPOSE</th>
+              </tr>
+              <tr class="odd">
+                <td>range</td>
+                <td>
+                  Displays a slider allowing for a range of numbers. Requires
+                  <code>min</code> and <code>max</code> input attributes to be
+                  set with a minimum and a maximum number.
+                </td>
+              </tr>
+              <tr class="even">
+                <td>color</td>
+                <td>
+                  Provides a color selection box, allowing the user to specify a
+                  particular color. Value becomes the hex color code of the
+                  user-selected color.
+                </td>
+              </tr>
+              <tr class="odd">
+                <td>file</td>
+                <td>
+                  Displays a file upload box, allowing the user to upload a
+                  file. Parsing of the file must be done by backend server code.
+                </td>
+              </tr>
+              <tr class="even">
+                <td>hidden</td>
+                <td>
+                  This input element is not displayed on the page. Instead, the
+                  <code>name</code> and <code>value</code> attributes are used
+                  to pass a variable to the processing page.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </main>
+    </div>
+
+    <!-- footer section -->
+
+    <footer>
+      <p>
+        &copy; 2025 Designed & built by Andrei Martinenko. All rights reserved.
+      </p>
+      <p>
+        <a
+          href="https://www.frontender.biz/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="underline-text">Visit my site</span>
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>

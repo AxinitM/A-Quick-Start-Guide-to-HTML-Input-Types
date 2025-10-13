@@ -1,0 +1,268 @@
+:root {
+  /* ===== COLORS ===== */
+
+  /* General var's sets */
+  --clr-page-bg: #faf9fd;
+  --clr-section-bg: #e6e0f8;
+  --clr-section-bg-alt: #f3f1fb;
+
+  /* Text's var sets  */
+  --clr-text-primary: #2d2d2d; 
+  --clr-text-heading: #1f2a44;
+  --clr-text-shadow: rgba(31, 42, 68, 0.15);
+  --clr-accent: #000080;
+
+  /* Table's var sets*/
+  --clr-table-title: #ccc7e3;
+  --clr-table-row-odd: #f4f2fa;
+  --clr-table-row-even: #ece8f5;
+
+  /* Code's var sets */
+  --clr-code-bg: #c7c7d7;
+
+  /* === Fonts' sets ===== */
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Poppins", "Inter", sans-serif;
+  --font-code: "Roboto Mono", monospace;
+
+  /* Fonts sizes */
+  --fs-base: 16px;
+  --fs-small: 0.9rem;
+  --fs-smallest: 0.7rem;
+  --fs-h1: 2.2rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1rem;
+
+  /* Line height and letter spacing sets */
+  --lh-base: 1.8;
+  --lh-heading: 1.4;
+  --ls-base: 0.5px;
+}
+
+/* === GENERAL SETS === */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 400;
+  line-height: var(--lh-base);
+  color: var(--clr-text-primary);
+  background-color: var(--clr-page-bg);
+}
+
+/* === HEADERS SETS === */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  color: var(--clr-text-heading);
+  text-shadow: 0 1px 2px var(--clr-text-shadow);
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  margin: 1.2rem auto;
+}
+
+/* === CONTAINER SETS */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/*  === TEXT SETS === */
+
+p {
+  line-height: var(--lh-base);
+  margin: 0.5rem auto;
+  text-indent: 1.5rem;
+}
+
+.accent-bold-text {
+  font-weight: 700;
+}
+
+code {
+  font-family: var(--font-code);
+  font-size: 0.95rem;
+  background-color: var(--clr-code-bg);
+  color: var(--clr-accent);
+  padding: 0.15em 0.25em;
+  border-radius: 4px;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+/* === LIST'S SETS === */
+
+li {
+  text-align: start;
+  text-indent: 1.5rem;
+  list-style-type: none;
+}
+ul li::before {
+  content: "– ";
+  font-weight: bold;
+  margin-right: 0.3em;
+}
+
+/* === TABLE SETS === */
+
+.input-types-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+  background-color: var(--clr-section-bg-alt);
+}
+
+.input-types-table th,
+.input-types-table td {
+  text-align: left;
+  padding: 0.6em 1em;
+  vertical-align: top;
+}
+
+/* === Section titles === */
+.input-types-table .section-row {
+  background-color: var(--clr-table-title);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.input-types-table .table-section-title {
+  text-align: center;
+}
+
+.input-types-table tbody tr.even {
+  background-color: var(--clr-table-row-even);
+}
+
+.input-types-table tbody tr.odd {
+  background-color: var(--clr-table-row-odd);
+}
+
+/* === First cell bold === */
+.input-types-table tr td:first-child {
+  font-weight: 700;
+}
+
+/* === DOESN'T WORK 
+      Alternating rows reset after each section === */
+/* .input-types-table tbody tr:not(.section-row):nth-of-type(odd)
+      {
+        background-color: var(--clr-table-row-odd);
+      }
+
+      .input-types-table tbody tr:not(.section-row):nth-of-type(even) {
+        background-color: var(--clr-table-row-even);
+      } */
+
+/*  === FOOTER SETS === */
+
+footer {
+  width: 100%;
+  background-color: var(--clr-section-bg-alt);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  color: var(--clr-accent);
+  font-size: var(--fs-smallest);
+}
+
+footer p {
+  font-weight: 700;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--clr-accent);
+}
+
+/* === RESPONSIVE STYLES FOR MOBILE AND TABLET === */
+
+@media (max-width: 768px) {
+  :root {
+    --fs-base: 14px;
+    --fs-small: 0.7rem;
+    --fs-smallest: 0.6rem;
+    --fs-h1: 1.5rem;
+    --fs-h2: 1.2rem;
+    --fs-h3: 0.9rem;
+    --lh-base: 1.6;
+  }
+
+  body {
+    padding: 0 1rem;
+  }
+
+  #container {
+    max-width: 90%;
+  }
+
+  h1,
+  h2 {
+    margin: 1.5rem auto 1rem;
+  }
+
+  p {
+    margin: 0.4rem 0;
+    text-indent: 1rem;
+  }
+
+  code {
+    font-size: 0.85rem;
+    padding: 0.1em 0.25em;
+  }
+
+  ul li {
+    text-indent: 1rem;
+  }
+
+  .input-types-table {
+    width: 100%;
+    font-size: var(--fs-small);
+  }
+
+  .input-types-table th,
+  .input-types-table td {
+    padding: 0.4em 0.6em;
+  }
+
+  footer {
+    padding: 0.75rem 0;
+    font-size: var(--fs-smallest);
+  }
+}
