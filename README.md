@@ -1,4 +1,4 @@
-HTML Input Types: A Quick Start Guide / Codecademy
+# HTML Input Types: A Quick Start Guide / Codecademy
 
 This is a solution to the **"Challenge Project: Build Your Own Cheat Sheet"** on Codecademy.
 
