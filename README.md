@@ -2,7 +2,7 @@
 
 This is a solution to the **"Challenge Project: Build Your Own Cheat Sheet"** on Codecademy.
 
-The goal of this project is to develop JavaScript functions that drive a small browser-based guessing game, allowing you to test your code and debug using the browser’s console.
+In this project, you’ll be building your own reference cheat sheet to help you build more websites in the future! Although there are great places to learn HTML & CSS like Codecademy, the best reference for yourself is often your own notes and projects.
 
 ---
 
