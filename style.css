@@ -94,7 +94,7 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -228,11 +228,7 @@ footer a {
     padding: 0 1rem;
   }
 
-  #container {
-    max-width: 90%;
-  }
-
-  h1,
+   h1,
   h2 {
     margin: 1.5rem auto 1rem;
   }
@@ -268,3 +264,4 @@ footer a {
   }
 
 }
+
