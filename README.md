@@ -53,7 +53,7 @@ Although there are great places to learn HTML & CSS like Codecademy, the best re
 
 - **Project Description:** [Codecademy Challenge Project](https://www.codecademy.com/projects/practice/independent-project-html-documentation)
 - **Live Demo:** [Live site URL](https://axinitm.github.io/A-Quick-Start-Guide-to-HTML-Input-Types/)
-- **Source Code:** [GitHub repository URL](https://github.com/...)
+- **Source Code:** [GitHub repository URL](https://github.com/AxinitM/A-Quick-Start-Guide-to-HTML-Input-Types/tree/main?tab=readme-ov-file)
 
 ---
 
