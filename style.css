@@ -94,7 +94,7 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -264,4 +264,5 @@ footer a {
   }
 
 }
+
 
